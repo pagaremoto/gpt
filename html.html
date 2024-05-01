@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control LED</title>
+</head>
+<body>
+    <h1>Control LED</h1>
+    <p>Estado del LED: <span id="ledState">Desconocido</span></p>
+    <button onclick="encenderLed()">Encender</button>
+    <button onclick="apagarLed()">Apagar</button>
+
+    <script>
+        function encenderLed() {
+            fetch('/encender')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('ledState').innerText = data;
+                });
+        }
+
+        function apagarLed() {
+            fetch('/apagar')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('ledState').innerText = data;
+                });
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control LED</title>
+</head>
+<body>
+    <h1>Control LED</h1>
+    <p>Estado del LED: <span id="ledState">Desconocido</span></p>
+    <button onclick="encenderLed()">Encender</button>
+    <button onclick="apagarLed()">Apagar</button>
+
+    <script>
+        function encenderLed() {
+            fetch('/encender')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('ledState').innerText = data;
+                });
+        }
+
+        function apagarLed() {
+            fetch('/apagar')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('ledState').innerText = data;
+                });
+        }
+    </script>
+</body>
+</html>
